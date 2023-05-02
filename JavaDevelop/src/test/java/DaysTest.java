@@ -42,5 +42,9 @@ public class DaysTest {
                 Arguments.of(7, "Saturday")
         );
     }
+    @Test
+    static void Tmt(){
+
+    }
 }
 
