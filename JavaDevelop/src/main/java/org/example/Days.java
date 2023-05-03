@@ -1,8 +1,6 @@
 package org.example;
-import org.apache.logging.log4j.LogManager;
 
 import java.util.ArrayList;
-import java.util.logging.Logger;
 
 public
 class Days {
