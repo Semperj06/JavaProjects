@@ -42,9 +42,30 @@ public class DaysTest {
                 Arguments.of(7, "Saturday")
         );
     }
-    @Test
-    static void Tmt(){
+    @ParameterizedTest
+    @MethodSource(value = "dataProvider")
+    public void UnitTesting(String FirstName, String LastName) {
+        try {
+            Logger.info("Name entered successfully");
+            webDriver.findElement(By.name("//input[@id='search_form_input_homepage'")).sendKeys(FirstName);
+        }
+        catch (Exception err){
+            Logger.error(err);
+        }
+        try {
+            Logger.info("Last Name entered successfully");
+            webDriver.findElement(By.name("//input[@name='lastname']")).sendKeys(LastName + Keys.ENTER);
+        }
+        catch (Exception err){
+            Logger.error(err);
+        }
 
     }
+
+
+    static Stream <Arguments> dataProvider() {
+        return Stream.of(Arguments.of("sdf", "null"));
+    }
+}
 }
 
