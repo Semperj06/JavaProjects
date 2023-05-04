@@ -1,63 +1,489 @@
-2023-05-03 13:49:21.396 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using Log4J2 as the default logging framework
-2023-05-03 13:49:21.399 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
-2023-05-03 13:49:21.399 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
-2023-05-03 13:49:21.400 [main] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@108531c2
-2023-05-03 13:49:21.406 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
-2023-05-03 13:49:21.407 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 20
-2023-05-03 13:49:21.407 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
-2023-05-03 13:49:21.407 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
-2023-05-03 13:49:21.407 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
-2023-05-03 13:49:21.408 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
-2023-05-03 13:49:21.408 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
-2023-05-03 13:49:21.408 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
-2023-05-03 13:49:21.409 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @28feb3fa
-2023-05-03 13:49:21.409 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
-2023-05-03 13:49:21.409 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
-2023-05-03 13:49:21.410 [main] DEBUG io.netty.util.internal.PlatformDependent - maxDirectMemory: 4294967296 bytes (maybe)
-2023-05-03 13:49:21.410 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: /var/folders/jq/h9d02j955d50glwp9j3cs14w0000gn/T (java.io.tmpdir)
-2023-05-03 13:49:21.410 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2023-05-03 13:49:21.410 [main] DEBUG io.netty.util.internal.PlatformDependent - Platform: MacOS
-2023-05-03 13:49:21.410 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
-2023-05-03 13:49:21.410 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2023-05-03 13:49:21.411 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
-2023-05-03 13:49:21.411 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
-2023-05-03 13:49:21.413 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
-2023-05-03 13:49:21.422 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2023-05-03 13:49:21.422 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2023-05-03 13:49:21.429 [main] DEBUG io.netty.handler.ssl.JdkSslContext - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
-2023-05-03 13:49:21.429 [main] DEBUG io.netty.handler.ssl.JdkSslContext - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
-2023-05-03 13:49:21.433 [main] DEBUG io.netty.util.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
-2023-05-03 13:49:21.438 [main] DEBUG io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
-2023-05-03 13:49:21.441 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
-2023-05-03 13:49:21.441 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
-2023-05-03 13:49:21.452 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
-2023-05-03 13:49:21.452 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
-2023-05-03 13:49:21.452 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
-2023-05-03 13:49:21.453 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
-2023-05-03 13:49:21.453 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
-2023-05-03 13:49:21.453 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
-2023-05-03 13:49:21.453 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
-2023-05-03 13:49:21.453 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2023-05-03 13:49:21.453 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
-2023-05-03 13:49:21.453 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
-2023-05-03 13:49:21.453 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
-2023-05-03 13:49:21.453 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
-2023-05-03 13:49:21.457 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
-2023-05-03 13:49:21.457 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
-2023-05-03 13:49:21.457 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-2023-05-03 13:49:21.586 [Forwarding newSession on session null to remote] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 1832 (auto-detected)
-2023-05-03 13:49:21.587 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
-2023-05-03 13:49:21.587 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
-2023-05-03 13:49:21.590 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtilInitializations - Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
-2023-05-03 13:49:21.591 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
-2023-05-03 13:49:21.591 [Forwarding newSession on session null to remote] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: bc:d0:74:ff:fe:1c:20:5b (auto-detected)
-2023-05-03 13:49:21.608 [AsyncHttpClient-1-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
-2023-05-03 13:49:21.608 [AsyncHttpClient-1-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
-2023-05-03 13:49:21.609 [AsyncHttpClient-1-2] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2d616ed4
-2023-05-03 13:49:21.618 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
-2023-05-03 13:49:21.618 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
-2023-05-03 13:49:21.619 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
-2023-05-03 13:49:21.619 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
-2023-05-03 13:49:21.619 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
-2023-05-03 13:49:22.547 [AsyncHttpClient-1-2] DEBUG io.netty.handler.codec.compression.Brotli - brotli4j not in the classpath; Brotli support will be unavailable.
-2023-05-03 13:49:22.585 [main] DEBUG io.netty.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0xe74361a4c1a20db3
+2023-05-04 09:05:05.843 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using Log4J2 as the default logging framework
+2023-05-04 09:05:05.845 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+2023-05-04 09:05:05.846 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+2023-05-04 09:05:05.847 [main] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@66c83fc8
+2023-05-04 09:05:05.853 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+2023-05-04 09:05:05.854 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 20
+2023-05-04 09:05:05.854 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+2023-05-04 09:05:05.854 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+2023-05-04 09:05:05.854 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+2023-05-04 09:05:05.855 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+2023-05-04 09:05:05.855 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+2023-05-04 09:05:05.855 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+2023-05-04 09:05:05.856 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @4cc0edeb
+2023-05-04 09:05:05.856 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2023-05-04 09:05:05.856 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+2023-05-04 09:05:05.857 [main] DEBUG io.netty.util.internal.PlatformDependent - maxDirectMemory: 4294967296 bytes (maybe)
+2023-05-04 09:05:05.857 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: /var/folders/jq/h9d02j955d50glwp9j3cs14w0000gn/T (java.io.tmpdir)
+2023-05-04 09:05:05.857 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2023-05-04 09:05:05.857 [main] DEBUG io.netty.util.internal.PlatformDependent - Platform: MacOS
+2023-05-04 09:05:05.857 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+2023-05-04 09:05:05.857 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2023-05-04 09:05:05.858 [main] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+2023-05-04 09:05:05.858 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+2023-05-04 09:05:05.861 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+2023-05-04 09:05:05.869 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2023-05-04 09:05:05.870 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2023-05-04 09:05:05.877 [main] DEBUG io.netty.handler.ssl.JdkSslContext - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+2023-05-04 09:05:05.877 [main] DEBUG io.netty.handler.ssl.JdkSslContext - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2023-05-04 09:05:05.882 [main] DEBUG io.netty.util.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+2023-05-04 09:05:05.886 [main] DEBUG io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+2023-05-04 09:05:05.889 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+2023-05-04 09:05:05.889 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+2023-05-04 09:05:05.900 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+2023-05-04 09:05:05.900 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+2023-05-04 09:05:05.901 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+2023-05-04 09:05:05.901 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+2023-05-04 09:05:05.901 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+2023-05-04 09:05:05.901 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+2023-05-04 09:05:05.901 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+2023-05-04 09:05:05.901 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2023-05-04 09:05:05.901 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+2023-05-04 09:05:05.901 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2023-05-04 09:05:05.901 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+2023-05-04 09:05:05.901 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2023-05-04 09:05:05.905 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+2023-05-04 09:05:05.905 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+2023-05-04 09:05:05.905 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2023-05-04 09:05:06.040 [Forwarding newSession on session null to remote] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 10247 (auto-detected)
+2023-05-04 09:05:06.041 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+2023-05-04 09:05:06.041 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+2023-05-04 09:05:06.044 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtilInitializations - Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
+2023-05-04 09:05:06.044 [Forwarding newSession on session null to remote] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
+2023-05-04 09:05:06.045 [Forwarding newSession on session null to remote] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: bc:d0:74:ff:fe:1c:20:5b (auto-detected)
+2023-05-04 09:05:06.061 [AsyncHttpClient-1-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+2023-05-04 09:05:06.062 [AsyncHttpClient-1-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+2023-05-04 09:05:06.062 [AsyncHttpClient-1-2] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@70adb32f
+2023-05-04 09:05:06.071 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2023-05-04 09:05:06.071 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+2023-05-04 09:05:06.071 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+2023-05-04 09:05:06.071 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+2023-05-04 09:05:06.071 [AsyncHttpClient-1-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+2023-05-04 09:05:06.952 [AsyncHttpClient-1-2] DEBUG io.netty.handler.codec.compression.Brotli - brotli4j not in the classpath; Brotli support will be unavailable.
+2023-05-04 09:05:06.991 [main] DEBUG io.netty.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0xd9214207dbcfc50e
+2023-05-04 09:05:07.715 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:05:07.743 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:05:08.785 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:05:08.831 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:05:08.877 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:05:08.970 [main] INFO  FacebookTest - First Name entered in field - null
+2023-05-04 09:05:09.001 [main] INFO  FacebookTest - LastName entered in field - null
+2023-05-04 09:05:10.043 [main] INFO  FacebookTest - Mail_Phone entered in field - null
+2023-05-04 09:05:10.092 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:05:10.125 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:05:10.165 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:05:30.171 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:05:30.182 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:05:31.304 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:05:32.808 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:05:32.837 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:05:33.893 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:05:33.933 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:05:33.976 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:05:34.060 [main] INFO  FacebookTest - First Name entered in field -  Иван
+2023-05-04 09:05:34.091 [main] INFO  FacebookTest - LastName entered in field - Трифонов
+2023-05-04 09:05:35.159 [main] INFO  FacebookTest - Mail_Phone entered in field - ruslan@gmail.com
+2023-05-04 09:05:35.207 [main] INFO  FacebookTest - NewPassword  entered in field - 5435
+2023-05-04 09:05:35.239 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:05:35.276 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:05:35.302 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:05:55.307 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:05:55.317 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:05:56.430 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:05:57.939 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:05:57.973 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:05:59.033 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:05:59.074 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:05:59.116 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:05:59.203 [main] INFO  FacebookTest - First Name entered in field - Devid
+2023-05-04 09:05:59.251 [main] INFO  FacebookTest - LastName entered in field - Devid
+2023-05-04 09:06:00.292 [main] INFO  FacebookTest - Mail_Phone entered in field - devid@gmail.com
+2023-05-04 09:06:00.341 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:06:00.372 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:06:00.411 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:06:00.437 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:06:20.443 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:06:20.452 [main] INFO  FacebookTest - ***The registration was successful
+2023-05-04 09:06:21.562 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:06:23.218 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:06:23.245 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:06:24.289 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:06:24.332 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:06:24.377 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:06:24.483 [main] INFO  FacebookTest - First Name entered in field - Милана 
+2023-05-04 09:06:24.491 [main] ERROR FacebookTest - java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+2023-05-04 09:06:25.535 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:06:25.588 [main] INFO  FacebookTest - NewPassword  entered in field - null54543
+2023-05-04 09:06:25.623 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:06:25.664 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:06:25.696 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:06:45.702 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:06:45.708 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:06:46.826 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:06:48.306 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:06:48.333 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:06:49.380 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:06:49.419 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:06:49.462 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:06:49.469 [main] ERROR FacebookTest - java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+2023-05-04 09:06:49.539 [main] INFO  FacebookTest - LastName entered in field - Ефремова
+2023-05-04 09:06:50.584 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:06:50.650 [main] INFO  FacebookTest - NewPassword  entered in field - null54543
+2023-05-04 09:06:50.681 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:06:50.718 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:06:50.749 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:07:10.754 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:07:10.759 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:07:11.877 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:07:13.447 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:07:13.474 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:07:14.526 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:07:14.566 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:07:14.606 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:07:14.691 [main] INFO  FacebookTest - First Name entered in field - Милана
+2023-05-04 09:07:14.740 [main] INFO  FacebookTest - LastName entered in field - Ефремова@
+2023-05-04 09:07:15.783 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:07:15.836 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:07:15.867 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:07:15.904 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:07:15.929 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:07:35.935 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:07:35.948 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:07:37.079 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:07:38.573 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:07:38.599 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:07:39.641 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:07:39.681 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:07:39.721 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:07:39.804 [main] INFO  FacebookTest - First Name entered in field - Милана
+2023-05-04 09:07:39.835 [main] INFO  FacebookTest - LastName entered in field - Ефремова
+2023-05-04 09:07:40.875 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@@gmail.com
+2023-05-04 09:07:40.926 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:07:40.955 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:07:40.993 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:07:41.017 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:08:01.021 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:08:01.026 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:08:02.155 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:08:03.675 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:08:03.703 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:08:04.757 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:08:04.799 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:08:04.839 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:08:04.927 [main] INFO  FacebookTest - First Name entered in field - Милана
+2023-05-04 09:08:04.959 [main] INFO  FacebookTest - LastName entered in field - Ефремова@
+2023-05-04 09:08:06.022 [main] INFO  FacebookTest - Mail_Phone entered in field - @milana@gmail.com
+2023-05-04 09:08:06.073 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:08:06.103 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:08:06.142 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:08:06.167 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:08:26.175 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:08:26.183 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:08:27.305 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:08:28.812 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:08:28.839 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:08:29.894 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:08:29.937 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:08:29.983 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:08:30.061 [main] INFO  FacebookTest - First Name entered in field - Милана@
+2023-05-04 09:08:30.092 [main] INFO  FacebookTest - LastName entered in field - Ефремова
+2023-05-04 09:08:31.137 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:08:31.184 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:08:31.215 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:08:31.252 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:08:31.277 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:08:51.282 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:08:51.289 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:08:52.395 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:08:53.892 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:08:53.919 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:08:54.972 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:08:55.008 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:08:55.053 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:08:55.174 [main] INFO  FacebookTest - First Name entered in field - Милана
+2023-05-04 09:08:55.206 [main] INFO  FacebookTest - LastName entered in field - Ефремова@
+2023-05-04 09:08:56.238 [main] INFO  FacebookTest - Mail_Phone entered in field - 
+2023-05-04 09:08:56.284 [main] INFO  FacebookTest - NewPassword  entered in field - 5435
+2023-05-04 09:08:56.317 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:08:56.359 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:09:16.365 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:09:16.375 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:09:17.487 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:09:19.070 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:09:19.095 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:09:20.133 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:09:20.172 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:09:20.212 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:09:20.299 [main] INFO  FacebookTest - First Name entered in field - Милана
+2023-05-04 09:09:20.330 [main] INFO  FacebookTest - LastName entered in field - Ефремова@
+2023-05-04 09:09:21.371 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:09:21.425 [main] INFO  FacebookTest - NewPassword  entered in field - Милана
+2023-05-04 09:09:21.456 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:09:21.495 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:09:21.520 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:09:41.525 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:09:41.533 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:09:42.648 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:09:44.174 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:09:44.199 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:09:45.254 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:09:45.299 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:09:45.338 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:09:45.418 [main] INFO  FacebookTest - First Name entered in field - Милана
+2023-05-04 09:09:45.452 [main] INFO  FacebookTest - LastName entered in field - Ефремова
+2023-05-04 09:09:46.520 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:09:46.566 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:09:46.597 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:09:46.634 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:09:46.659 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:10:06.664 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:10:07.791 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:10:09.437 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:10:09.461 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:10:10.510 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:10:10.550 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:10:10.588 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:10:10.668 [main] INFO  FacebookTest - First Name entered in field - Милана
+2023-05-04 09:10:10.700 [main] INFO  FacebookTest - LastName entered in field - Ефремова
+2023-05-04 09:10:11.742 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:10:11.795 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:10:11.825 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:10:11.861 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:10:11.886 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:10:31.892 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:10:33.070 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:10:34.557 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:10:34.591 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:10:35.649 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:10:35.702 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:10:35.762 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:10:35.846 [main] INFO  FacebookTest - First Name entered in field - Милана
+2023-05-04 09:10:35.875 [main] INFO  FacebookTest - LastName entered in field - Ефремова
+2023-05-04 09:10:36.920 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:10:36.965 [main] INFO  FacebookTest - NewPassword  entered in field - 
+2023-05-04 09:10:36.998 [main] INFO  FacebookTest - NewPassword  entered in field - 543362634
+2023-05-04 09:10:37.035 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:10:37.064 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:10:57.069 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:10:57.078 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:10:58.195 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:10:59.712 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:10:59.738 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:11:00.780 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:11:00.817 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:11:00.856 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:11:00.943 [main] INFO  FacebookTest - First Name entered in field - Милана
+2023-05-04 09:11:00.974 [main] INFO  FacebookTest - LastName entered in field - Ефремова
+2023-05-04 09:11:02.018 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:11:02.030 [main] ERROR FacebookTest - java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+2023-05-04 09:11:02.059 [main] INFO  FacebookTest - NewPassword  entered in field - null
+2023-05-04 09:11:02.097 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:11:02.128 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:11:22.132 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:11:22.141 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:11:23.250 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:11:24.830 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:11:24.857 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:11:25.899 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:11:25.938 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:11:25.976 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:11:26.053 [main] INFO  FacebookTest - First Name entered in field - Милана
+2023-05-04 09:11:26.084 [main] INFO  FacebookTest - LastName entered in field - Ефремова
+2023-05-04 09:11:27.127 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:11:27.180 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:11:27.186 [main] ERROR FacebookTest - java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+2023-05-04 09:11:27.226 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:11:27.251 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:11:47.256 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:11:48.385 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:11:49.949 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:11:49.976 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:11:51.013 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:11:51.050 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:11:51.088 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:11:51.161 [main] INFO  FacebookTest - First Name entered in field -    
+2023-05-04 09:11:51.191 [main] INFO  FacebookTest - LastName entered in field - Милана
+2023-05-04 09:11:52.231 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:11:52.288 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:11:52.315 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:11:52.357 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:11:52.387 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:12:12.390 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:12:12.397 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:12:13.566 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:12:15.214 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:12:15.243 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:12:16.297 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:12:16.349 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:12:16.393 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:12:16.472 [main] INFO  FacebookTest - First Name entered in field - Ефремова 
+2023-05-04 09:12:16.502 [main] INFO  FacebookTest - LastName entered in field -      
+2023-05-04 09:12:17.550 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:12:17.607 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:12:17.636 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:12:17.677 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:12:17.708 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:12:37.713 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:12:37.722 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:12:38.839 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:12:40.452 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:12:40.476 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:12:41.524 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:12:41.565 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:12:41.605 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:12:41.690 [main] INFO  FacebookTest - First Name entered in field - Ефремова 
+2023-05-04 09:12:41.721 [main] INFO  FacebookTest - LastName entered in field - Милана 
+2023-05-04 09:12:42.784 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:12:42.832 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:12:42.864 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:12:42.903 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:12:42.927 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:13:02.933 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:13:04.048 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:13:05.532 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:13:05.558 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:13:06.609 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:13:06.647 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:13:06.693 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:13:06.775 [main] INFO  FacebookTest - First Name entered in field - Ефремова 
+2023-05-04 09:13:06.804 [main] INFO  FacebookTest - LastName entered in field - >?<
+2023-05-04 09:13:07.844 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:13:07.902 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:13:07.937 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:13:07.979 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:13:08.004 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:13:28.007 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:13:28.013 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:13:29.133 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:13:30.705 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:13:30.734 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:13:31.771 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:13:31.810 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:13:31.849 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:13:31.932 [main] INFO  FacebookTest - First Name entered in field - <>> 
+2023-05-04 09:13:31.961 [main] INFO  FacebookTest - LastName entered in field - Милана 
+2023-05-04 09:13:32.995 [main] INFO  FacebookTest - Mail_Phone entered in field - @@
+2023-05-04 09:13:33.057 [main] INFO  FacebookTest - NewPassword  entered in field - ><?><?><>?<?><>?<>??>
+2023-05-04 09:13:33.086 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:13:33.120 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:13:53.125 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:13:53.134 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:13:54.252 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:13:55.711 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:13:55.738 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:13:56.782 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:13:56.819 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:13:56.857 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:13:56.947 [main] INFO  FacebookTest - First Name entered in field - Ефремоваfdsfdsfdsfdsfdsfdssdfefwfwef 
+2023-05-04 09:13:56.974 [main] INFO  FacebookTest - LastName entered in field - Милана 
+2023-05-04 09:13:58.023 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:13:58.073 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:13:58.104 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:13:58.140 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:13:58.165 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:14:18.170 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:14:18.182 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:14:19.294 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:14:20.804 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:14:20.829 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:14:21.880 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:14:21.925 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:14:21.984 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:14:22.063 [main] INFO  FacebookTest - First Name entered in field - Ефремова 
+2023-05-04 09:14:22.092 [main] INFO  FacebookTest - LastName entered in field - Милана 
+2023-05-04 09:14:23.152 [main] INFO  FacebookTest - Mail_Phone entered in field - fsdfsdfsdafsadgsdgsdafsdfdgdsfasdafmilana@gmail.com
+2023-05-04 09:14:23.202 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:14:23.233 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:14:23.285 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:14:23.308 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:14:43.313 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:14:43.321 [main] INFO  FacebookTest - ***The registration was successful
+2023-05-04 09:14:44.495 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:14:46.197 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:14:46.223 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:14:47.277 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:14:47.320 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:14:47.358 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:14:47.472 [main] INFO  FacebookTest - First Name entered in field - Ефремова 
+2023-05-04 09:14:47.502 [main] INFO  FacebookTest - LastName entered in field - Милана 
+2023-05-04 09:14:48.546 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:14:48.595 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:14:48.645 [main] INFO  FacebookTest - NewPassword  entered in field - fdsjhtisdjfidsjflidsjfioldsjfdsjfkdsjfkdsjfsdjklfqwe
+2023-05-04 09:14:48.680 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:14:48.705 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:15:08.710 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:15:09.834 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:15:11.336 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:15:11.360 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:15:12.400 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:15:12.438 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:15:12.478 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:15:12.560 [main] INFO  FacebookTest - First Name entered in field - Ефремова 
+2023-05-04 09:15:12.589 [main] INFO  FacebookTest - LastName entered in field - Милана 
+2023-05-04 09:15:13.634 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:15:13.725 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76sdflksdfmksdfmnsaflsdmfksdmfksdmfsdamfsdafnkasdnfgksdafnndaksfnsadkfndskafndksafmsdakfmlsadfmksdamfsadmfsdagnsdmkf
+2023-05-04 09:15:13.755 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:15:13.793 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:15:13.817 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:15:33.824 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:15:35.007 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:15:36.459 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:15:36.491 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:15:37.531 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:15:37.573 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:15:37.628 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:15:37.711 [main] INFO  FacebookTest - First Name entered in field - پرسش های شما 
+2023-05-04 09:15:37.771 [main] INFO  FacebookTest - LastName entered in field - Милана 
+2023-05-04 09:15:38.818 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:15:38.879 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:15:38.912 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:15:38.952 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:15:38.977 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:15:58.977 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:15:58.987 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:16:00.105 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:16:01.711 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:16:01.739 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:16:02.783 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:16:02.828 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:16:02.885 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:16:02.958 [main] INFO  FacebookTest - First Name entered in field - Ефремова 
+2023-05-04 09:16:03.010 [main] INFO  FacebookTest - LastName entered in field - چند روز قبل از پرواز، بلیط هواپیما را بخریم؟ 
+2023-05-04 09:16:04.063 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:16:04.134 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:16:04.165 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:16:04.203 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:16:04.226 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:16:24.229 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:16:24.241 [main] INFO  FacebookTest - ***The registration failed
+2023-05-04 09:16:25.357 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:16:26.819 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:16:26.847 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:16:27.896 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:16:27.933 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:16:27.974 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:16:28.063 [main] INFO  FacebookTest - First Name entered in field - Ефремова 
+2023-05-04 09:16:28.122 [main] INFO  FacebookTest - LastName entered in field - Милана 
+2023-05-04 09:16:29.203 [main] INFO  FacebookTest - Mail_Phone entered in field - milana@gmail.com
+2023-05-04 09:16:29.254 [main] INFO  FacebookTest - NewPassword  entered in field - بلیط هواپیما
+2023-05-04 09:16:29.284 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:16:29.322 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:16:29.348 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:16:49.349 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:16:50.473 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:16:51.981 [main] INFO  FacebookTest - The page was open
+2023-05-04 09:16:52.006 [main] INFO  FacebookTest - Click on Создать новый аккаунт
+2023-05-04 09:16:53.049 [main] INFO  FacebookTest - Gender Selected
+2023-05-04 09:16:53.092 [main] INFO  FacebookTest - Year was selected successfully
+2023-05-04 09:16:53.134 [main] INFO  FacebookTest - Appeal was selected successfully
+2023-05-04 09:16:53.206 [main] INFO  FacebookTest - First Name entered in field - Devid
+2023-05-04 09:16:53.237 [main] INFO  FacebookTest - LastName entered in field - Devid
+2023-05-04 09:16:54.272 [main] INFO  FacebookTest - Mail_Phone entered in field - weioe@gmail.com
+2023-05-04 09:16:54.315 [main] INFO  FacebookTest - NewPassword  entered in field - qwertyu76
+2023-05-04 09:16:54.347 [main] INFO  FacebookTest - NewPassword  entered in field - qwe
+2023-05-04 09:16:54.391 [main] INFO  FacebookTest - The field was displayed
+2023-05-04 09:16:54.416 [main] INFO  FacebookTest - Click on Registration Button
+2023-05-04 09:17:14.392 [main] INFO  FacebookTest - Waiting for page to load
+2023-05-04 09:17:14.402 [main] INFO  FacebookTest - ***The registration was successful
+2023-05-04 09:17:15.518 [main] INFO  FacebookTest - The page was closed
+2023-05-04 09:17:15.521 [main] INFO  FacebookTest - The page was closed
