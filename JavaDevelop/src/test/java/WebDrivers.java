@@ -6,8 +6,10 @@ public class WebDrivers {
 
     public static WebDriver getWebDriver() {
         if (webDriver == null) {
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless"); 
             WebDriverManager.chromedriver().setup();
-            webDriver = new ChromeDriver();
+            webDriver = new ChromeDriver(options);
             webDriver.manage().window().maximize();
 
 
